@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+
+.barlow-condensed-thin {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-extralight {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-light {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-regular {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-medium {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-semibold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-bold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-extrabold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-black {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-thin-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-extralight-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-light-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-regular-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-medium-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-semibold-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-bold-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-extrabold-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .barlow-condensed-black-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+body{
+    box-sizing: border-box;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom,#1F3656,#161C3E);
+    height: 100vh;
+}
+
+.scoreBoard{
+    display: flex;
+    border: 3px solid #5B6B84;
+    min-width: 60vw;
+    padding: 16px;
+    border-radius: 16px;
+    justify-content: space-between;
+}
+
+.gameName{
+    color: white;
+    font-weight: 500;
+    word-spacing: 12px;
+    font-size: 48px;
+    line-height: 45px;
+}
+
+.scoreButton >.scoreText{
+    font-size: 18px;
+    font-weight: 500;
+    color: #39438F;
+   
+    
+}
+
+.scoreButton>.scoreValue{
+    color: #5B5967;
+    font-size: 64px ;
+    font-weight: 700;
+    line-height: 58px;
+}
+
+.scoreButton{
+    padding: 4px 50px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #fcfcfc;
+    margin: 0.5rem;
+    /* box-shadow: rgba(2px 2px #000000, 0.5) */
+}
+
+.gameBackground{
+    position: relative;
+
+}
+.gameOptionDiv{
+    margin-left: 1.5rem;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options{
+    position: absolute;
+    top: 19rem;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    width: 30rem;
+    justify-content: center;
+
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset;
+    border-radius: 100%;
+    height: 14vh;
+    width: 14vh;
+    border: none;
+    background-color: white;
+    box-shadow: inset 0 8px 0px #bbbfd5;
+    rotate: -180deg;
+    
+}
+
+.option {
+    rotate: 180deg;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 17vh; */
+    width: fit-content;
+    height: fit-content;
+    padding: 25px;
+    width:fit-content;
+    border-radius: 100%;
+    margin-right: 1.5rem;
+    border: none;
+    /* box-shadow: inset 0 17px 0px red;  */
+    box-shadow: inset 0 8px 0px rgba(12, 12, 12, 0.25);/* Inset shadow for visibility */
+}
+
+.option:hover{
+    cursor: pointer;;
+}
+
+#Paper{
+    background-color: #506EF2;
+}
+
+  
+#Scissors{
+    background-color: #ECA823;
+  }
+
+  
+#Rock{
+    background-color: #DD3352;
+  }
+
+  .clickedContainer{
+    display: flex;
+    flex-direction:row;
+    width: 60vw;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 6px;
+  }
+  .pickedOption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 6px;
+  }
+  .compOption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 6px;
+  }
+
+.compOption>P{
+  position: relative;
+  z-index: 18;
+}
+
+.pickedOption>p{
+  position: relative;
+  z-index: 18;
+}
+.emptyDiv{
+  min-height: 288px;
+  min-width: 288px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minHeightDiv{
+  border-radius: 50%;
+  background-color: #172240;
+  height: 208px;
+  width: 208px;
+}
+ 
+
+  .optionSvgs{
+    height: 3.5rem;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .compOption>button{
+    display: flex !important;
+
+
+  }
+
+  .resultText{
+    font-size: 52px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .playAgain{
+    padding: 1rem 2rem;
+    font-size: 16px;
+    font-weight: medium;
+    letter-spacing: 4px;
+    color: red;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 8px;
+  
+    border: none;
+  }
+  .resultDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 18;
+  }
+
+  .rulesDiv{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    width: 90vw;
+
+  }
+
+  .btnRules{
+    padding: 1rem 2rem;
+    font-size: 16px;
+    font-weight: medium;
+    letter-spacing: 4px;
+    color:white;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+
+  .absoluteDiv{
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    width: 100vw;
+    z-index:20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: #3D4062;
+    background-color: white;
+    padding: 2.5rem 2.75rem;
+    border-radius: 1rem;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .closeBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .imgDes{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pulse{
+    display: relative;
+    width: fit-content;
+    height: fit-content;
+    border-radius:50% ;
+    background-color: #2B3956;
+    z-index: 15;
+  }
+  .pulse>.btnDiv{
+ 
+    z-index: 16;
+  }
+  .selectDivComp, .selectDivUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 16;
+
+
+  }
+
+  .selectDivComp span{
+    position: absolute;
+    z-index: 0;
+    border-radius: 100%;
+    background: #2B3956;
+    /* display: block; */
+  
+
+  }
+
+  .selectDivUser span{
+    position: absolute;
+    z-index: 0;
+    border-radius: 100%;
+    background: #2B3956;
+  }
+
+  .span1{
+    width: 348px;
+    height: 348px;
+    opacity: 0.7;
+  }
+
+  .span2{
+    width: 448px;
+    height: 448px;
+    opacity: 0.5;
+  }
+
+  .span3{
+    width: 528px;
+    height: 528px;
+    opacity: 0.4;
+  }
+
+  .span4{
+    width: 620px;
+    height: 620px;
+    opacity: 0.3;
+  }
+
+
+
+
+  /* @keyframes pulseAnimate {
+    100%{
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  } */
+
+  .hide{
+    display: none;
+   
+  }
