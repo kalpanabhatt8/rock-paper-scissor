@@ -6,7 +6,11 @@ let btnDiv = document.querySelector('.btnDiv')
 let gameOptionDiv = document.querySelector(".gameOptionDiv")
 let clickedContainer = document.querySelector('.clickedContainer')
 let resultText = document.querySelector('.resultText')
-let playAgain = document.querySelector('.playAgain')
+let resultText2 = document.querySelector('.resultText2')
+let resultDiv = document.querySelector('.resultDiv')
+let playAgainDiv = document.querySelector(".playAgainDiv")
+let playAgain = document.querySelector('.playAgain2')
+let playAgain2 = document.querySelector('.playAgain')
 let scoreValue = document.querySelector('.scoreValue')
 let btnRules = document.querySelector('.btnRules')
 let emptyDiv = document.querySelector('.emptyDiv')
@@ -51,14 +55,8 @@ let houseOption = (selectedId) => {
     selectDiv.appendChild(span4)
 
     let SelectedbtnDiv = cloneSelectOne.querySelector('.btnDiv')
-    SelectedbtnDiv.style.height = "13rem"
-    SelectedbtnDiv.style.width = "13rem"
-    SelectedbtnDiv.style.boxShadow = "inset 0 14px 0px #bbbfd5"
-
-
-    cloneSelectOne.style.padding = "40px"
-    cloneSelectOne.style.margin = "0px"
-    cloneSelectOne.style.boxShadow = "inset 0 14px 0px rgba(12, 12, 12, 0.25)"
+    SelectedbtnDiv.classList.add("new-btn-style")
+    cloneSelectOne.classList.add("clone-select-one")
 
     let selectSpan = selectDiv.querySelectorAll("span")
     selectSpan.forEach((span) => {
@@ -90,6 +88,7 @@ let showWinner = (userWinner, selectedId, houseSelectedId) => {
                 span.classList.remove('hide')
             })
             resultText.textContent = "YOU WIN"
+            resultText2.textContent = "YOU WIN"
             score++
             console.log("Score: " + score)
             scoreValue.innerText = score
@@ -104,6 +103,7 @@ let showWinner = (userWinner, selectedId, houseSelectedId) => {
                 span.classList.remove('hide')
             })
             resultText.textContent = "YOU LOSE"
+            resultText2.textContent = "YOU LOSE"
             score--
             console.log("Score: " + score)
             scoreValue.innerText = score
@@ -121,6 +121,7 @@ let checkWinner = (selectedId) => {
         console.log("It's a tie!")
         setTimeout(() => {
             resultText.textContent = "DRAW"
+            resultText2.textContent = "DRAW"
         }, 2000);
     } else {
         let userWinner = true
@@ -135,7 +136,10 @@ let checkWinner = (selectedId) => {
         showWinner(userWinner, selectedId, houseSelectedId)
     }
     setTimeout(() => {
+        resultDiv.classList.remove("hide")
+        playAgainDiv.classList.remove("hide")
         playAgain.classList.remove('hide')
+        playAgain2.classList.remove('hide')
     }, 2000);
 
 }
@@ -152,14 +156,9 @@ let startGame = (selectedId) => {
 
 
             let SelectedbtnDiv = option.querySelector('.btnDiv')
-            SelectedbtnDiv.style.height = "13rem"
-            SelectedbtnDiv.style.width = "13rem"
-            SelectedbtnDiv.style.boxShadow = "inset 0 14px 0px #bbbfd5"
 
-
-            option.style.padding = "40px"
-            option.style.margin = "0px"
-            option.style.boxShadow = "inset 0 14px 0px rgba(12, 12, 12, 0.25)"
+            SelectedbtnDiv.classList.add("new-btn-style")
+            option.classList.add("clone-select-one")
 
             let svg = option.querySelector('.optionSvgs')
             svg.style.height = "6rem"
@@ -198,15 +197,53 @@ playAgain.addEventListener("click", () => {
         option.style.display = "flex"
         option.style.cssText = ""
         let btnDiv = option.querySelector(".btnDiv")
+        btnDiv.classList.remove("clone-select-one")
+        btnDiv.classList.remove("new-btn-style")
         btnDiv.style.cssText = ""
         resultText.textContent = ""
+        resultText2.textContent = ""
         playAgain.classList.add("hide")
+        resultDiv.classList.add("hide")
+        playAgainDiv.classList.add("hide")
         let svg = option.querySelector('.optionSvgs')
         svg.style.cssText = ""
         emptyDiv.classList.remove('hide')
         selectDiv.innerHTML = ""
         selectDivUser.innerHTML = ""
+        option.classList.remove("new-btn-style")
+        option.classList.remove("clone-select-one")
+
     })
+
+
+    clickedContainer.classList.add("hide")
+    selectDiv.querySelector("button").remove()
+    selectDivUser.querySelector("button").remove()
+})
+
+playAgain2.addEventListener("click", () => {
+    gameOptionDiv.classList.remove('hide')
+    option.forEach((option) => {
+        option.style.display = "flex"
+        option.style.cssText = ""
+        let btnDiv = option.querySelector(".btnDiv")
+        btnDiv.classList.remove("clone-select-one")
+        btnDiv.classList.remove("new-btn-style")
+        btnDiv.style.cssText = ""
+        resultText.textContent = ""
+        resultText2.textContent = ""
+        playAgain2.classList.add("hide")
+        resultDiv.classList.add("hide")
+        playAgainDiv.classList.add("hide")
+        let svg = option.querySelector('.optionSvgs')
+        svg.style.cssText = ""
+        emptyDiv.classList.remove('hide')
+        selectDiv.innerHTML = ""
+        selectDivUser.innerHTML = ""
+        option.classList.remove("new-btn-style")
+        option.classList.remove("clone-select-one")
+    })
+
     clickedContainer.classList.add("hide")
     selectDiv.querySelector("button").remove()
     selectDivUser.querySelector("button").remove()

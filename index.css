@@ -134,6 +134,7 @@ body{
     padding: 16px;
     border-radius: 16px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .gameName{
@@ -165,12 +166,17 @@ body{
     border: 0px;
     background-color: #fcfcfc;
     margin: 0.5rem;
-    /* box-shadow: rgba(2px 2px #000000, 0.5) */
+    height: 100%;
 }
 
 .gameBackground{
     position: relative;
 
+}
+
+.gameBackground>svg{
+  width: 350px;
+  height: 311px;
 }
 .gameOptionDiv{
     margin-left: 1.5rem;
@@ -254,6 +260,7 @@ body{
   }
   .pickedOption{
     display: flex;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -265,6 +272,7 @@ body{
   }
   .compOption{
     display: flex;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -319,6 +327,7 @@ body{
     font-weight: 600;
     color: white;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   .playAgain{
@@ -333,6 +342,8 @@ body{
   
     border: none;
   }
+
+
   .resultDiv{
     display: flex;
     flex-direction: column;
@@ -341,6 +352,9 @@ body{
     position: relative;
     z-index: 18;
   }
+
+  
+  
 
   .rulesDiv{
     display: flex;
@@ -454,13 +468,13 @@ body{
   .span3{
     width: 528px;
     height: 528px;
-    opacity: 0.4;
+    opacity: 0.35;
   }
 
   .span4{
-    width: 620px;
-    height: 620px;
-    opacity: 0.3;
+    width: 580px;
+    height: 580px;
+    opacity: 0.15;
   }
 
 
@@ -473,7 +487,241 @@ body{
     }
   } */
 
+  .new-btn-style {
+    height: 13rem;
+    width: 13rem;
+    box-shadow: inset 0 14px 0px #bbbfd5;
+  }
+
+
+  .clone-select-one {
+    padding: 40px;
+    margin: 0px;
+    box-shadow: inset 0 14px 0px rgba(12, 12, 12, 0.25);
+  }
+
+  .clickedContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pickedOption, .compOption {
+    flex: 1;
+  }
+  
+  .resultDiv {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .playAgainDiv {
+    display: none; /* Hidden by default */
+  }
+
+
   .hide{
     display: none;
    
+  }
+
+
+
+  @media (max-width: 768px) {
+    .scoreBoard{
+      display: flex;
+      border: 3px solid #5B6B84;
+      min-width: 64vw;
+      padding: 16px;
+      border-radius: 16px;
+      justify-content: space-between;
+      align-items: center;
+  }
+   
+    body{
+      padding:2rem 1rem;
+    }
+
+    .playAgain2{
+      padding: 1rem 1rem;
+      font-size: 16px;
+      font-weight: medium;
+      letter-spacing: 4px;
+      color: red;
+      cursor: pointer;
+      background-color: white;
+      border-radius: 8px;
+    
+      border: none;
+    }
+
+    .resultText2{
+      font-size: 48px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .playAgainDiv{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+      z-index: 18;
+    }
+    .pickedOption>p{
+      font-size: 18px;
+      letter-spacing: 4px;
+    }
+
+    .compOption>p{
+      font-size: 18px;
+      letter-spacing: 4px;
+    }
+  
+.gameName{
+  color: white;
+  font-weight: 500;
+  word-spacing: 12px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.scoreButton{
+  padding: 12px 40px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #fcfcfc;
+  margin: 0.5rem;
+
+  /* box-shadow: rgba(2px 2px #000000, 0.5) */
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset;
+  border-radius: 100%;
+  height: 10vh !important;
+  width: 10vh !important;
+  border: none;
+  background-color: white;
+  box-shadow: inset 0 8px 0px #bbbfd5;
+  rotate: -180deg;
+  
+}
+
+.btnDiv>svg{
+  height: 2.5rem !important;
+}
+
+.rulesDiv{
+  justify-content: center;
+}
+
+.option {
+  rotate: 180deg;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 17vh; */
+  width: fit-content;
+  height: fit-content;
+  padding: 25px;
+  width:fit-content;
+  border-radius: 100%;
+  margin-right: 1.5rem;
+  border: none;
+  /* box-shadow: inset 0 17px 0px red;  */
+  box-shadow: inset 0 8px 0px rgba(12, 12, 12, 0.25);/* Inset shadow for visibility */
+}
+
+.new-btn-style {
+  height: 11rem;
+  width: 11rem;
+  box-shadow: inset 0 8px 0px #bbbfd5;
+}
+
+
+.clone-select-one {
+  padding: 20px;
+  margin: 0px;
+  box-shadow: inset 0 8px 0px rgba(12, 12, 12, 0.25);
+}
+
+.span1{
+  width: 100px;
+  height: 100px;
+  opacity: 0.7;
+}
+
+.span2{
+  width: 150px;
+  height: 150px;
+  opacity: 0.5;
+}
+
+.span3{
+  width: 200px;
+  height: 200px;
+  opacity: 0.4;
+}
+
+.span4{
+  width: 250px;
+  height: 250px;
+  opacity: 0.3;
+}
+
+.playAgain2 {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.gameBackground>svg{
+  width: 320px;
+  height: 291px;
+
+}
+
+/* Append playAgain to a new div below */
+.clickedContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+}
+
+
+/* Move the playAgain button to a new div below on mobile */
+.playAgainDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.minHeightDiv{
+  height:100px;
+  width:100px;
+}
+.emptyDiv{
+  height: 60px !important;
+  width: 100px !important
+}
+.hide{
+  display: none;
+ 
+}
+.resultDiv {
+  display: none; /* Hide resultDiv on mobile to move the play button below */
+}
+
+
+
   }
