@@ -393,7 +393,8 @@ body{
 
   .imgDiv{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 2.5rem;
     color: #3D4062;
     background-color: white;
@@ -401,6 +402,12 @@ body{
     border-radius: 1rem;
     font-size: 32px;
     font-weight: 600;
+    max-width: 360px;
+    border-radius: 1rem;
+    justify-content: space-between;
+  }
+  .imgDiv>img{
+    padding: 1rem;
   }
 
   .closeBtn{
@@ -530,6 +537,18 @@ body{
 
 
   @media (max-width: 768px) {
+    body{
+      padding:2rem 1rem;
+    }
+    .gameOptionDiv{
+      width: 24rem;
+    }
+
+    .options{
+      width: 27rem;
+    }
+    
+  
     .scoreBoard{
       display: flex;
       border: 3px solid #5B6B84;
@@ -711,8 +730,8 @@ body{
   width:100px;
 }
 .emptyDiv{
-  height: 60px !important;
-  width: 100px !important
+  min-height: 100px;
+  min-width: 100px 
 }
 .hide{
   display: none;
@@ -721,7 +740,32 @@ body{
 .resultDiv {
   display: none; /* Hide resultDiv on mobile to move the play button below */
 }
+.pickedOption{
+  flex-direction: column-reverse;
+}
+.compOption{
+  flex-direction: column-reverse;
+}
+.imgDiv{
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100vw;
+  border-radius: 0px;
+}
+.imgDiv>button{
+  order:3
+ }
 
+ .imgDiv>img{
+  padding: 0rem;
+}
 
 
   }

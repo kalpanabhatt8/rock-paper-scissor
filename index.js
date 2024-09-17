@@ -26,8 +26,6 @@ option.forEach((option) => {
         console.log(selectedId, 'option clicked')
         startGame(selectedId)
     })
-
-
 })
 
 
